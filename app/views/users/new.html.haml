@@ -1,0 +1,17 @@
+.step_box
+  Step One
+  .left
+  .right
+.info_box
+  Start by giving us all your personal data
+  .left
+  .right
+= semantic_form_for @user, :remote => true do |form|
+  = form.inputs do
+    = form.input :first_name
+    = form.input :last_name
+    = form.input :email_address
+    = form.input :birthday, :start_year => Time.now.year -  60, :end_year => Time.now.year - 10
+    = form.input :shoe_size
+  = form.actions do
+    = form.action :submit, :label => "", :button_html => { :class => "save_button" }

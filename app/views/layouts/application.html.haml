@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %title= 'TestTask'
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      %header
+        %h1 Seed Blocks Test
+        %nav
+          = render 'common/top_menu'
+      .top_block
+        .info
+          %h2 <strong>Getting your</strong> avesome prize is easy!
+          %ol
+            %li Sign up and complete a survey
+            %li Tell all your friends about us
+            %li Get an awesome prize!
+        .timer_box
+          %p Time remaining to complete your tasks
+          .timer <span class="seconds">360</span>.<span class="ms">0</span>
+          %span SECONDS
+        .clear
+      .content
+        = yield
+      %footer
+        %p &#64; Copyright Seedblocks 2012.

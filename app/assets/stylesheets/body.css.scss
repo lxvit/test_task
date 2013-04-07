@@ -1,0 +1,89 @@
+@font-face {
+    font-family: edwardian;
+    src: asset-url('ITCEDSCR.TTF', font) format('truetype')
+}
+
+body {margin: auto;font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;font-weight:bold;}
+.clear {clear:both;}
+.container {width:1263px;margin:0 auto;background: image-url("content_bg.png"); position:relative;}
+
+header {height:68px;background: image-url("header_bg.jpg") repeat-x; line-height:68px;
+  h1 {font-family:edwardian;color:white;font-size:48px;font-weight:bold;float:left;margin-left:144px;}
+  nav{float:right;margin-right:139px;
+    .item {background: image-url("nav_item_bg.png") repeat-x;line-height:35px;display:inline-block;position:relative; margin-left:27px;
+      a {font-size:14px;color:#fff;font-weight:bold;padding:0 4px;text-decoration:none;}
+      .left, .right {position:absolute;top:0;width:7px;height:35px;}
+      .left {left:-7px;background: image-url("nav_item_left.png");}
+      .right {right:-7px;background: image-url("nav_item_right.png")}
+      .selected {color:#06a0a5;}
+    }
+  }
+}
+
+.top_block { margin:58px 182px 54px;
+  .info { float:left;
+    h2 {text-transform: uppercase; margin-bottom:30px;
+      strong {color:#0b8185}
+    }
+
+    ol { counter-reset: item; margin-left:10px;}
+    li { display: block; font-size:18px;line-height:25px;margin-bottom:12px;}
+    li:before { content: counter(item) " "; counter-increment: item; background: #0b8185; border-radius:100%;width:24px;height:24px;display:inline-block;color:#dee9ea;text-align:center;margin-right:20px;}
+  }
+
+  .timer_box { float:right; border:1px solid #bbb; padding:20px 25px 22px 28px;background: #fff;color:#0b8185; font-size:47px;height:112px;width:365px;
+    p {font-size:18px; margin-bottom:30px;}
+    .timer {display:inline;
+      .seconds, .ms {color:inherit;}
+    }
+    span {color: #ccc;}
+  }
+}
+
+.content {border:1px solid #bbb;background: #fff;width:898px;margin:0 auto;padding:46px 0 20px;position:relative;margin-bottom:100px;
+  .step_box {position:absolute;background:image-url("step_box_bg.png") repeat-x;line-height:35px; color:#fff;margin-left:25px;top:-18px;padding:0 30px;font-size:24px;
+    .left, .right {position:absolute;top:0;width:7px;height:35px;}
+    .left {left:-7px;background:image-url("step_box_left.png");}
+    .right {right:-7px;background:image-url("step_box_right.png");}
+  }
+  .info_box {position:absolute;background:image-url("info_box_bg.png") repeat-x;line-height:38px;color:#fff;overflow:visible;right:0;top:-20px;padding:0 6px 0 10px;font-size:18px;
+    .left, .right {position:absolute;top:0;width:20px;height:38px;}
+    .left {left:-20px;background:image-url("info_box_left.png");}
+    .right {width:13px;height:49px;right:-13px;background:image-url("info_box_right.png");}
+  }
+
+  h3 {text-transform: uppercase;text-align:center;font-size:24px;}
+  img {margin: 46px auto;display:block;}
+}
+
+.formtastic { font-weight:normal; position:relative;font-size:13px;
+  .inputs {width:363px;margin-left:200px;}
+  .input {overflow: hidden;padding: 0;margin-top:0;margin-bottom:5px;
+    .label {text-transform: uppercase;width:110px;font-weight:bold;line-height:33px;}
+  }
+  .stringish input {width:206px;border:1px solid #b0a7a8;padding:4px;height:25px;}
+  select {height:33px;border:1px solid #b0a7a8;background:none;padding:4px 0;-webkit-appearance: none;-moz-appearance: none;appearance: none;background:image-url("dropdown_arrow.jpg") no-repeat right;width:60px;}
+  #user_birthday_2i, #survey_end_of_the_world_2i {width:89px;}
+
+  .fragments-group {padding-left:110px; width:60%;
+    :last-child {margin:0;}
+  }
+
+  .actions {position:absolute;right:105px; top:60px;padding:0;}
+  .save_button {background:image-url("save_button.png");width:148px;height:53px;border:none;cursor:pointer;
+  }
+  .inline-errors {margin-left:110px;}
+  .error {
+    select, input {border-color:red;}
+  }
+  abbr {display:none;}
+}
+
+.survey_form .formtastic {
+  .inputs {width:533px;margin-left:30px;}
+  .input .label {width:280px;}
+  .fragments-group {padding-left:280px;}
+  .inline-errors {margin-left:280px;}
+}
+
+footer {height:36px;text-align:center;background:#2f251b;line-height:36px;font-weight:normal;font-size:14px;color:#fff;width:100%;}

@@ -1,0 +1,18 @@
+.survey_form
+  .step_box
+    Step Two
+    .left
+    .right
+  .info_box
+    Take this survey so we can learn about you
+    .left
+    .right
+  = semantic_form_for @survey, :remote => true do |form|
+    = form.inputs do
+      = form.input :favorite_ice_cream, :label => 'What is your favorite ice cream?'
+      = form.input :favorite_superhero, :label => 'Who is your favorite superhero?'
+      = form.input :favorite_movie_star, :label => 'Who is your favorite movie star?'
+      = form.input :end_of_the_world, :start_year => Time.now.year, :end_year => Time.now.year + 100, :label => 'When do you think tha world will end?'
+      = form.input :super_bowl_winner, :label => 'Who will win the super bowl this year?'
+    = form.actions do
+      = form.action :submit, :label => "", :button_html => { :class => "save_button" }

@@ -1,0 +1,5 @@
+<% if @survey %>
+  $('.content').html(" <%= escape_javascript(render 'surveys/form') %> ");
+<% else %>
+  $('.content').html(" <%= escape_javascript(render :template => 'users/new') %> ");
+<% end %>

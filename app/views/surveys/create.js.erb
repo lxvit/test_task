@@ -1,0 +1,5 @@
+<% if @survey.valid? %>
+  $('.content').html(" <%= escape_javascript(render 'common/prize') %> ");
+<% else %>
+  $('.content').html(" <%= escape_javascript(render 'surveys/form') %> ");
+<% end %>
